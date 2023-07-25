@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Archivo, Archivo_Black, Roboto } from "next/font/google";
@@ -26,7 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={archivo.className}>{children}</body>
+      <body
+        className={`${roboto.variable} ${archivo.variable} ${archivo_black.variable} ${archivo.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

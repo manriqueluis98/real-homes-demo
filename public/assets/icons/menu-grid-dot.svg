@@ -1,0 +1,36 @@
+<svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+    >
+      <g>
+        <circle
+          cx="24"
+          cy="24"
+          r="24"
+          fill="#0A1510"
+          fill-opacity=".7"
+        ></circle>
+      </g>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M19 21C20.1046 21 21 20.1046 21 19C21 17.8954 20.1046 17 19 17C17.8954 17 17 17.8954 17 19C17 20.1046 17.8954 21 19 21ZM19 31C20.1046 31 21 30.1046 21 29C21 27.8954 20.1046 27 19 27C17.8954 27 17 27.8954 17 29C17 30.1046 17.8954 31 19 31ZM31 19C31 20.1046 30.1046 21 29 21C27.8954 21 27 20.1046 27 19C27 17.8954 27.8954 17 29 17C30.1046 17 31 17.8954 31 19ZM29 31C30.1046 31 31 30.1046 31 29C31 27.8954 30.1046 27 29 27C27.8954 27 27 27.8954 27 29C27 30.1046 27.8954 31 29 31Z"
+        fill="white"
+      ></path>
+      <defs>
+        <filter
+          id="filter0_b_201_93"
+          x="-40"
+          y="-40"
+          width="128"
+          height="128"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feGaussianBlur stdDeviation="20"></feGaussianBlur>
+        </filter>
+      </defs>
+    </svg>
