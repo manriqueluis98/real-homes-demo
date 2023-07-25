@@ -1,13 +1,6 @@
 import { iconImg } from "@/config/siteData";
 import Link from "next/link";
-
-function ContactForm() {
-  return (
-    <>
-      <form></form>
-    </>
-  );
-}
+import { ContactForm } from "./ContactForm";
 
 function ContactAgent() {
   return (

@@ -45,18 +45,16 @@ export function CustomAccordion() {
   ];
   return (
     <div className="w-full">
-      <Accordion type="single" collapsible>
+      <Accordion type="multiple">
         {data.map((item, idx) => {
           return (
-            <>
-              <AccordionItem value={`value-${idx}`}>
-                <AccordionTrigger className="hover:no-underline hover:text-pr-primary font-serif flex-row flex justify-start gap-4">
-                  {item.icon}
-                  <span>{item.trigger}</span>
-                </AccordionTrigger>
-                <AccordionContent>{item.description}</AccordionContent>
-              </AccordionItem>
-            </>
+            <AccordionItem key={idx} value={`value-${idx}`}>
+              <AccordionTrigger className="hover:no-underline hover:text-pr-primary font-serif flex-row flex justify-start gap-4">
+                {item.icon}
+                <span>{item.trigger}</span>
+              </AccordionTrigger>
+              <AccordionContent>{item.description}</AccordionContent>
+            </AccordionItem>
           );
         })}
       </Accordion>
