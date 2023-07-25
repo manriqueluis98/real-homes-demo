@@ -17,6 +17,7 @@ import NatureSection from "@/components/NatureSection";
 import FoorSection from "@/components/FoorSection";
 import LocationSection from "@/components/LocationSection";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -31,6 +32,8 @@ export default function Home() {
       <FoorSection />
       <LocationSection />
       <Contact />
+      <hr className="min-w-[90%]"></hr>
+      <Footer />
     </main>
   );
 }
