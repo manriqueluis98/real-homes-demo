@@ -55,23 +55,23 @@ const nearbyItems = [
 export default function LocationSection() {
   return (
     <>
-      <div className="p-4 my-4 flex flex-col justify-center items-center">
-        <span className=" text-pr-primary font-semibold">- Location</span>
-        <h2 className="text-2xl md:text-5xl font-serif py-4 text-center">
+      <div className="my-4 flex flex-col items-center justify-center p-4">
+        <span className=" font-semibold text-pr-primary">- Location</span>
+        <h2 className="py-4 text-center font-serif text-2xl md:text-5xl">
           All Roads Lead To RealHomes
         </h2>
-        <div className="bg-pr-primary h-[3px] w-14"></div>
+        <div className="h-[3px] w-14 bg-pr-primary"></div>
 
         {/* TODO: Inser Google Maps API Javascript */}
 
-        <div className="nearby-locations my-8 flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-x-48">
+        <div className="nearby-locations my-8 flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-x-48 lg:gap-x-80">
           {nearbyItems.map((item) => {
             return (
               <div
-                className="nearby-item flex flex-col justify-center items-center md:flex-row md:gap-4  md:justify-start "
+                className="nearby-item flex flex-col items-center justify-center md:flex-row md:justify-start  md:gap-4 "
                 key={item.name}
               >
-                <div className="item-container bg-pr-primary p-3 w-fit rounded-full">
+                <div className="item-container w-fit rounded-full bg-pr-primary p-3">
                   {item.icon}
                 </div>
                 <div className="text-container">

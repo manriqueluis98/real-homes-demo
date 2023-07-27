@@ -6,22 +6,22 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <>
-      <div className="hero-content px-4 pt-4 pb-10 md:p-10 bg-contain">
-        <h2 className="text-xl px-2">{siteData.hero.upperText}</h2>
-        <h2 className="text-5xl md:text-7xl md:max-w-md py-2 font-serif">
+      <div className="hero-content bg-contain px-4 pb-10 pt-4 md:p-10 lg:mx-32 xl:mx-24">
+        <h2 className="px-2 text-xl">{siteData.hero.upperText}</h2>
+        <h2 className="py-2 font-serif text-5xl md:max-w-md md:text-7xl xl:text-8xl xl:leading-snug">
           {siteData.hero.title}
         </h2>
 
-        <div className="bg-pr-primary/70 h-[3px] w-28 mx-2 mb-8"></div>
+        <div className="mx-2 mb-8  h-[3px] w-28  bg-pr-primary/70 "></div>
 
-        <ul className="flex flex-col gap-2 mb-6">
+        <ul className="mb-6 flex flex-col gap-2">
           {siteData.hero.items.map((item) => {
             return (
               <li key={item.name} className="flex flex-row gap-2">
-                <div className="li-icon flex justify-center w-6">
+                <div className="li-icon flex w-6 justify-center">
                   {item.icon}
                 </div>
-                <span>{item.name}</span>
+                <span className="xl:text-lg">{item.name}</span>
               </li>
             );
           })}

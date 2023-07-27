@@ -53,7 +53,7 @@ export function CustomAccordion() {
         {data.map((item, idx) => {
           return (
             <AccordionItem key={idx} value={`value-${idx}`}>
-              <AccordionTrigger className="hover:no-underline md:text-xl hover:text-pr-primary font-serif flex-row flex justify-start gap-4">
+              <AccordionTrigger className="flex flex-row justify-start gap-4 font-serif hover:text-pr-primary hover:no-underline md:text-xl">
                 {item.icon}
                 <span>{item.trigger}</span>
               </AccordionTrigger>
@@ -68,11 +68,11 @@ export function CustomAccordion() {
 
 export default function NatureSection() {
   return (
-    <div className="flex mb-8 mt-12  flex-col justify-center items-center px-4">
-      <h2 className="text-2xl md:text-5xl font-serif text-center">
+    <div className="mb-8 mt-12 flex  flex-col items-center justify-center px-4">
+      <h2 className="max-w-md text-center font-serif text-2xl md:text-5xl">
         Kind to Both - Nature & People
       </h2>
-      <div className="bg-pr-primary green-line w-20 h-[3px] my-4 md:my-8">
+      <div className="green-line my-4 h-[3px] w-20 bg-pr-primary md:my-8">
         {" "}
       </div>
       <CustomAccordion />
