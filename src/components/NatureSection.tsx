@@ -48,16 +48,18 @@ export function CustomAccordion() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full 2xl:mx-12 2xl:ml-32 2xl:max-w-md">
       <Accordion className="md:px-2" type="multiple">
         {data.map((item, idx) => {
           return (
             <AccordionItem key={idx} value={`value-${idx}`}>
-              <AccordionTrigger className="flex flex-row justify-start gap-4 font-serif hover:text-pr-primary hover:no-underline md:text-xl">
+              <AccordionTrigger className="flex flex-row justify-start gap-4 font-serif hover:text-pr-primary hover:no-underline md:text-xl 2xl:text-2xl">
                 {item.icon}
                 <span>{item.trigger}</span>
               </AccordionTrigger>
-              <AccordionContent>{item.description}</AccordionContent>
+              <AccordionContent className="2xl:max-w-sm 2xl:text-lg 2xl:font-light">
+                {item.description}
+              </AccordionContent>
             </AccordionItem>
           );
         })}
@@ -68,16 +70,16 @@ export function CustomAccordion() {
 
 export default function NatureSection() {
   return (
-    <div className="mb-8 mt-12 flex  flex-col items-center justify-center px-4">
-      <h2 className="max-w-md text-center font-serif text-2xl md:text-5xl">
+    <div className="mb-8 mt-12 flex  flex-col items-center justify-center px-4 2xl:m-0 2xl:my-32 2xl:min-w-full 2xl:p-0">
+      <h2 className="max-w-md text-center font-serif text-2xl md:text-5xl 2xl:max-w-2xl 2xl:text-7xl">
         Kind to Both - Nature & People
       </h2>
       <div className="green-line my-4 h-[3px] w-20 bg-pr-primary md:my-8">
         {" "}
       </div>
-      <CustomAccordion />
+      <div className="wrapper 2xl:flex 2xl:min-w-full 2xl:flex-row 2xl:items-center 2xl:justify-center">
+        <CustomAccordion />
 
-      <div className="test ">
         <Carousel
           key={"02"}
           images={carouselImages}

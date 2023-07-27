@@ -6,7 +6,7 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <>
-      <div className="hero-content bg-contain px-4 pb-10 pt-4 md:p-10 lg:mx-32 xl:mx-24">
+      <div className="hero-content bg-contain px-4 pb-10 pt-4 md:p-10 lg:mx-32 xl:mx-24 2xl:py-12 2xl:pb-40">
         <h2 className="px-2 text-xl">{siteData.hero.upperText}</h2>
         <h2 className="py-2 font-serif text-5xl md:max-w-md md:text-7xl xl:text-8xl xl:leading-snug">
           {siteData.hero.title}

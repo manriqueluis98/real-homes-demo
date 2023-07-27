@@ -64,7 +64,7 @@ export default function LocationSection() {
 
         {/* TODO: Inser Google Maps API Javascript */}
 
-        <div className="nearby-locations my-8 flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-x-48 lg:gap-x-80">
+        <div className="nearby-locations my-8 flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-x-48 lg:gap-x-80 2xl:mx-12 2xl:grid-cols-4 2xl:gap-x-40 2xl:gap-y-12">
           {nearbyItems.map((item) => {
             return (
               <div

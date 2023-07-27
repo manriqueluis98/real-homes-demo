@@ -53,7 +53,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="mx-4 space-y-3 md:mx-0 md:px-4 md:py-8 md:shadow-lg lg:mx-10 lg:rounded"
+        className="mx-4 space-y-3 md:mx-0 md:px-4 md:py-8 md:shadow-lg lg:mx-10 lg:rounded 2xl:mx-12 2xl:min-w-[1200px] 2xl:bg-white 2xl:p-12"
       >
         <FormDescription className="font-serif text-2xl text-pr-dark-green md:text-3xl">
           Schedule a Tour
