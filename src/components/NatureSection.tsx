@@ -5,6 +5,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { iconImg } from "@/config/siteData";
+import Carousel from "./ui/carousel";
+
+const carouselImages = ["/assets/Nature-01.jpg", "/assets/Nature-02.jpg"];
 
 export function CustomAccordion() {
   const data = [
@@ -43,20 +46,19 @@ export function CustomAccordion() {
         "Through conscious planning and sustainable landscaping, we create a nurturing habitat for diverse flora and fauna.",
     },
   ];
+
   return (
     <div className="w-full">
-      <Accordion type="single" collapsible>
+      <Accordion className="md:px-2" type="multiple">
         {data.map((item, idx) => {
           return (
-            <>
-              <AccordionItem value={`value-${idx}`}>
-                <AccordionTrigger className="hover:no-underline hover:text-pr-primary font-serif flex-row flex justify-start gap-4">
-                  {item.icon}
-                  <span>{item.trigger}</span>
-                </AccordionTrigger>
-                <AccordionContent>{item.description}</AccordionContent>
-              </AccordionItem>
-            </>
+            <AccordionItem key={idx} value={`value-${idx}`}>
+              <AccordionTrigger className="hover:no-underline md:text-xl hover:text-pr-primary font-serif flex-row flex justify-start gap-4">
+                {item.icon}
+                <span>{item.trigger}</span>
+              </AccordionTrigger>
+              <AccordionContent>{item.description}</AccordionContent>
+            </AccordionItem>
           );
         })}
       </Accordion>
@@ -66,12 +68,23 @@ export function CustomAccordion() {
 
 export default function NatureSection() {
   return (
-    <div className="flex flex-col justify-center items-center px-4">
-      <h2 className="text-2xl font-serif text-center">
+    <div className="flex mb-8 mt-12  flex-col justify-center items-center px-4">
+      <h2 className="text-2xl md:text-5xl font-serif text-center">
         Kind to Both - Nature & People
       </h2>
-      <div className="bg-pr-primary green-line w-20 h-[3px] my-4"> </div>
+      <div className="bg-pr-primary green-line w-20 h-[3px] my-4 md:my-8">
+        {" "}
+      </div>
       <CustomAccordion />
+
+      <div className="test ">
+        <Carousel
+          key={"02"}
+          images={carouselImages}
+          arrowsPosition="bottom-0 left-0"
+          aspectRatio="aspect-4/3"
+        ></Carousel>
+      </div>
     </div>
   );
 }

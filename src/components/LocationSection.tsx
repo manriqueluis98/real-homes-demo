@@ -57,25 +57,27 @@ export default function LocationSection() {
     <>
       <div className="p-4 my-4 flex flex-col justify-center items-center">
         <span className=" text-pr-primary font-semibold">- Location</span>
-        <h2 className="text-2xl font-serif py-4 text-center">
+        <h2 className="text-2xl md:text-5xl font-serif py-4 text-center">
           All Roads Lead To RealHomes
         </h2>
         <div className="bg-pr-primary h-[3px] w-14"></div>
 
         {/* TODO: Inser Google Maps API Javascript */}
 
-        <div className="nearby-locations my-8 flex flex-col gap-8">
+        <div className="nearby-locations my-8 flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-x-48">
           {nearbyItems.map((item) => {
             return (
               <div
-                className="nearby-item flex flex-col justify-center items-center"
+                className="nearby-item flex flex-col justify-center items-center md:flex-row md:gap-4  md:justify-start "
                 key={item.name}
               >
                 <div className="item-container bg-pr-primary p-3 w-fit rounded-full">
                   {item.icon}
                 </div>
-                <p className="font-bold">{item.name}</p>
-                <span className="font-extralight">{item.distance}</span>
+                <div className="text-container">
+                  <p className="font-bold">{item.name}</p>
+                  <span className="font-extralight">{item.distance}</span>
+                </div>
               </div>
             );
           })}

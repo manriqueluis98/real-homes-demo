@@ -27,10 +27,10 @@ export default function Amenities() {
     <>
       <div className="bg-pr-dark-green text-white px-4 py-8">
         <span className="font-semibold">{siteData.amenities.upperText}</span>
-        <h2 className="text-2xl font-serif pt-4 pb-2">
+        <h2 className="text-2xl md:text-6xl font-serif pt-4 pb-2">
           {siteData.amenities.title}
         </h2>
-        <div className="line-white bg-white h-[3px] w-20"></div>
+        <div className="line-white md:my-4 md:w-14 bg-white h-[3px] w-20"></div>
         <p className="text-xl py-4 mt-2">{siteData.amenities.description}</p>
 
         <div className="item-list-container py-4">

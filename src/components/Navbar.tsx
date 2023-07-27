@@ -8,7 +8,7 @@ import { siteData } from "@/config/siteData";
 export default function Navbar() {
   return (
     <>
-      <nav className=" flex flex-col justify-center items-center gap-4 py-2 ">
+      <nav className=" flex flex-col md:flex-row md:justify-between md:px-4 justify-center items-center gap-4 py-2 ">
         <div className="nav-brand ">
           <Logo />
         </div>
