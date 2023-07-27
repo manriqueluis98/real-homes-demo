@@ -38,7 +38,7 @@ const about = {
       title_2: "over twelve floors",
     },
     {
-      number: "7.5K",
+      number: "7.5k",
       title_1: "Square Feet of nature",
       title_2: "around the block",
     },

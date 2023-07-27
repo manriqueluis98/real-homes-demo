@@ -53,9 +53,9 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="mx-4 space-y-3 md:px-4 md:shadow-lg md:mx-0 md:py-8"
+        className="mx-4 space-y-3 md:mx-0 md:px-4 md:py-8 md:shadow-lg lg:mx-10 lg:rounded"
       >
-        <FormDescription className="font-serif text-pr-dark-green text-2xl md:text-3xl">
+        <FormDescription className="font-serif text-2xl text-pr-dark-green md:text-3xl">
           Schedule a Tour
         </FormDescription>
         <FormField
@@ -111,7 +111,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="button-container flex flex-col items-center my-8 md:items-end md:py-4">
+        <div className="button-container my-8 flex flex-col items-center md:items-end md:py-4">
           <Button type="submit" className="md:text-xl">
             Schedule a Tour
           </Button>

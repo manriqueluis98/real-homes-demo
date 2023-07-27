@@ -11,32 +11,32 @@ const carouselImages = [
 export const GreenLine = () => {
   return (
     <>
-      <div className="bg-pr-primary h-[3px] w-20 my-4 md:my-8"></div>
+      <div className="my-4 h-[3px] w-20 bg-pr-primary md:my-8"></div>
     </>
   );
 };
 
 export default function About() {
   return (
-    <div className="p-4 my-4 flex flex-col justify-center items-center ">
-      <div className="about-content md:flex md:flex-row md:py-10">
-        <div className="title-container">
-          <span className=" text-pr-primary font-semibold">
+    <div className="my-4 flex flex-col items-center justify-center p-4 ">
+      <div className="about-content  md:flex md:flex-row lg:mb-16 lg:w-full lg:items-center lg:justify-between">
+        <div className=" title-container ">
+          <span className=" font-semibold text-pr-primary">
             {siteData.about.upperText}
           </span>
-          <h2 className="text-2xl md:text-5xl font-serif py-4">
+          <h2 className="py-4 font-serif text-2xl md:text-5xl lg:max-w-[500px] ">
             {siteData.about.title}
           </h2>
-          <div className="bg-pr-primary h-[3px] w-14"></div>
+          <div className="h-[3px] w-14 bg-pr-primary"></div>
         </div>
 
         <div className="description-container md:max-w-sm">
-          <p className="text-xl md:text-[22px] md:leading-8 pb-2 pt-4">
+          <p className="pb-2 pt-4 text-xl md:text-[22px] md:leading-8">
             {siteData.about.description}
           </p>
           <Link
             href={"/"}
-            className="text-pr-primary py-2 font-bold flex flex-row gap-1 items-center "
+            className="flex flex-row items-center gap-1 py-2 font-bold text-pr-primary "
           >
             <IoIosArrowForward />
             <span>About Us</span>
@@ -51,16 +51,16 @@ export default function About() {
         aspectRatio="aspect-video"
       ></Carousel>
 
-      <div className="stats-container flex flex-col md:flex-row md:my-16 md:divide-x md:gap-8 gap-16 my-8 items-center justify-center">
+      <div className="stats-container my-8 flex flex-col items-center justify-center gap-16 md:my-14 md:flex-row md:gap-0 md:divide-x">
         {siteData.about.stats.map((stat) => {
           return (
             <div
-              className="stat flex flex-col justify-center md:px-4 items-center"
+              className="stat flex  flex-col items-center justify-center  md:px-6 lg:px-16"
               key={stat.title_1}
             >
-              <p className="text-5xl font-serif">{stat.number}</p>
+              <p className="font-serif text-5xl">{stat.number}</p>
               <GreenLine></GreenLine>
-              <h3 className="text-xl text-center">
+              <h3 className="text-center text-xl">
                 {stat.title_1}
                 <br />
                 {stat.title_2}
