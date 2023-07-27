@@ -40,6 +40,9 @@ module.exports = {
         "pr-dark-green": "#0A1510",
         "pr-light-green": "#DAEDED",
       },
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

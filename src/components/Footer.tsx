@@ -27,20 +27,23 @@ const socialsData = [
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 py-10">
-      <div className="logo-container">
-        <Logo />
+    <footer className="flex flex-col items-center justify-center gap-4 py-10 md:w-full">
+      <div className="brand-container flex flex-col items-center gap-4 md:flex-row md:justify-between md:w-full md:px-6">
+        <div className="logo-container">
+          <Logo />
+        </div>
+        <ul className="socials-container flex flex-row gap-4">
+          {socialsData.map((social, idx) => {
+            return (
+              <li className=" p-4 rounded-full border-2" key={idx}>
+                {social.icon}
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <ul className="socials-container flex flex-row gap-4">
-        {socialsData.map((social, idx) => {
-          return (
-            <li className=" p-4 rounded-full border-2" key={idx}>
-              {social.icon}
-            </li>
-          );
-        })}
-      </ul>
-      <div className="copyright flex flex-col items-center">
+
+      <div className="copyright flex flex-col items-center md:my-4">
         <span>
           Designed by{" "}
           <Link

@@ -6,9 +6,13 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <>
-      <div className="hero-content px-4 pt-4 pb-10 bg-contain">
+      <div className="hero-content px-4 pt-4 pb-10 md:p-10 bg-contain">
         <h2 className="text-xl px-2">{siteData.hero.upperText}</h2>
-        <h2 className="text-5xl py-2 font-serif">{siteData.hero.title}</h2>
+        <h2 className="text-5xl md:text-7xl md:max-w-md py-2 font-serif">
+          {siteData.hero.title}
+        </h2>
+
+        <div className="bg-pr-primary/70 h-[3px] w-28 mx-2 mb-8"></div>
 
         <ul className="flex flex-col gap-2 mb-6">
           {siteData.hero.items.map((item) => {

@@ -4,14 +4,20 @@ import { ContactForm } from "./ContactForm";
 
 function ContactAgent() {
   return (
-    <div className="flex flex-col items-center justify-center text-center gap-4 my-8">
-      <div className="agent-image">
-        <img alt="real state agent" src="/assets/image_360.png" width={128} />
-      </div>
+    <div className="flex flex-col items-center justify-center text-center gap-4 my-8 md:grid md:grid-cols-2 md:place-items-center">
+      <div className="agent md:flex md:flex-row md:items-center md:gap-4">
+        <div className="agent-image">
+          <img
+            alt="real state agent"
+            src="/assets/image_360.png"
+            className="w-[128px] md:w-[100px]"
+          />
+        </div>
 
-      <div className="agent-data">
-        <p className="font-bold">Jenny Wilswon</p>
-        <p className="font-light text-gray-600">Real State Agent</p>
+        <div className="agent-data">
+          <p className="font-bold">Jenny Wilswon</p>
+          <p className="font-light text-gray-600">Real State Agent</p>
+        </div>
       </div>
 
       <div className="contact-data">
@@ -38,13 +44,13 @@ function ContactAgent() {
 
 export default function Contact() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:w-full">
       <div className="p-4 my-4 bg-pr-dark-green text-white flex flex-col items-center pt-16">
         <span className=" font-semibold ">- Quick Connect</span>
-        <h2 className="text-2xl font-serif py-4 text-center">
+        <h2 className="text-2xl md:text-4xl font-serif py-4 text-center">
           Get in touch with us for any questions & help
         </h2>
-        <div className="bg-white h-[3px] w-14"></div>
+        <div className="my-4 bg-white h-[3px] w-14"></div>
       </div>
 
       <ContactForm />

@@ -14,7 +14,7 @@ import About from "@/components/About";
 import Navbar from "@/components/Navbar";
 import Amenities from "@/components/Amenities";
 import NatureSection from "@/components/NatureSection";
-import FoorSection from "@/components/FoorSection";
+import FoorSection from "@/components/FloorSection";
 import LocationSection from "@/components/LocationSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between  text-pr-dark-green">
-      <div className="nav-bg relative">
+      <div className="nav-bg relative w-full">
         <Navbar />
         <Hero />
       </div>
