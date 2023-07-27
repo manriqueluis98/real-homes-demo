@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { siteData } from "@/config/siteData";
 
 interface IconItemLi {
@@ -8,11 +9,11 @@ interface IconItemLi {
 export function ItemsIconListLi({ items }: { items: IconItemLi[] }) {
   return (
     <>
-      <ul className="flex flex-col gap-4 mb-6">
+      <ul className="mb-6 flex flex-col gap-4">
         {items.map((item) => {
           return (
             <li key={item.name} className="flex flex-row gap-2">
-              <div className="li-icon flex justify-center w-6">{item.icon}</div>
+              <div className="li-icon flex w-6 justify-center">{item.icon}</div>
               <span className="font-sansRoboto">{item.name}</span>
             </li>
           );
@@ -24,19 +25,28 @@ export function ItemsIconListLi({ items }: { items: IconItemLi[] }) {
 
 export default function Amenities() {
   return (
-    <>
-      <div className="bg-pr-dark-green text-white px-4 py-8">
-        <span className="font-semibold">{siteData.amenities.upperText}</span>
-        <h2 className="text-2xl md:text-6xl font-serif pt-4 pb-2">
-          {siteData.amenities.title}
-        </h2>
-        <div className="line-white md:my-4 md:w-14 bg-white h-[3px] w-20"></div>
-        <p className="text-xl py-4 mt-2">{siteData.amenities.description}</p>
+    <div className="banner grid 2xl:grid-cols-2 ">
+      <div className="banner-image hidden min-h-full 2xl:inline-block">
+        <img
+          src="/assets/way-to-live.jpg"
+          alt=""
+          className="h-[100%] object-cover"
+        ></img>
+      </div>
+      <div className="banner-content">
+        <div className="bg-pr-dark-green px-4 py-8 text-white 2xl:px-24">
+          <span className="font-semibold">{siteData.amenities.upperText}</span>
+          <h2 className="pb-2 pt-4 font-serif text-2xl md:text-6xl 2xl:text-7xl">
+            {siteData.amenities.title}
+          </h2>
+          <div className="line-white h-[3px] w-20 bg-white md:my-4 md:w-14"></div>
+          <p className="mt-2 py-4 text-xl">{siteData.amenities.description}</p>
 
-        <div className="item-list-container py-4">
-          <ItemsIconListLi items={siteData.amenities.items} />
+          <div className="item-list-container py-4">
+            <ItemsIconListLi items={siteData.amenities.items} />
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

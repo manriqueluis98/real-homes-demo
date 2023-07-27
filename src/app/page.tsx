@@ -32,7 +32,7 @@ export default function Home() {
       <FoorSection />
       <LocationSection />
       <Contact />
-      <hr className="min-w-[90%]"></hr>
+      <hr className="min-w-[90%] 2xl:min-w-[82%]"></hr>
       <Footer />
     </main>
   );

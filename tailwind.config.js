@@ -43,6 +43,9 @@ module.exports = {
       aspectRatio: {
         "4/3": "4 / 3",
       },
+      screens: {
+        "2xl": "1440px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

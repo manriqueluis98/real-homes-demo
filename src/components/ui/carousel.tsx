@@ -52,19 +52,19 @@ export default function Carousel({
 
   return (
     <div
-      className={`${aspectRatio} w-[90vw] md:w-[95vw] carousel-container relative`}
+      className={`${aspectRatio} carousel-container relative w-[90vw] md:w-[95vw] 2xl:w-full`}
     >
       <div
         style={{ backgroundImage: `url(${images[currentImageIdx]})` }}
-        className="w-full h-full images-container bg-cover bg-center transition-all ease-in duration-800"
+        className="images-container duration-800 h-full w-full bg-cover bg-center transition-all ease-in"
       ></div>
       <div
-        className={`controls-container absolute ${arrowsPosition} flex flex-row  w-fit gap-[2px]`}
+        className={`controls-container absolute ${arrowsPosition} flex w-fit  flex-row gap-[2px]`}
       >
-        <div className="p-4 bg-white/95" onClick={prevImage}>
+        <div className="bg-white/95 p-4" onClick={prevImage}>
           <MdArrowBackIosNew size={24}></MdArrowBackIosNew>
         </div>
-        <div className="p-4 bg-white/95" onClick={nextImage}>
+        <div className="bg-white/95 p-4" onClick={nextImage}>
           <MdArrowForwardIos size={24}></MdArrowForwardIos>
         </div>
       </div>

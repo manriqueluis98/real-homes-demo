@@ -4,7 +4,7 @@ import { ContactForm } from "./ContactForm";
 
 function ContactAgent() {
   return (
-    <div className="flex flex-col items-center justify-center text-center gap-4 my-8 md:grid md:grid-cols-2 md:place-items-center">
+    <div className="my-8 flex flex-col items-center justify-center gap-4 text-center md:grid md:grid-cols-2 md:place-items-center 2xl:grid-cols-4 2xl:gap-0 2xl:text-lg">
       <div className="agent md:flex md:flex-row md:items-center md:gap-4">
         <div className="agent-image">
           <img
@@ -32,7 +32,7 @@ function ContactAgent() {
       <div className="cta-data flex flex-col">
         <span>Would you like to visit the property?</span>
         <Link
-          className="font-sabns text-pr-primary underline font-bold"
+          className="font-sabns font-bold text-pr-primary underline"
           href={"/"}
         >
           Schedule a Tour
@@ -44,18 +44,24 @@ function ContactAgent() {
 
 export default function Contact() {
   return (
-    <div className="flex flex-col md:w-full">
-      <div className="p-4 my-4 bg-pr-dark-green text-white flex flex-col items-center pt-16">
-        <span className=" font-semibold ">- Quick Connect</span>
-        <h2 className="text-2xl md:text-4xl font-serif py-4 text-center">
-          Get in touch with us for any questions & help
-        </h2>
-        <div className="my-4 bg-white h-[3px] w-14"></div>
+    <div className="flex flex-col md:w-full 2xl:relative">
+      <div className="banner 2xl:grid 2xl:grid-cols-2 2xl:bg-pr-dark-green 2xl:bg-[url(/assets/form-kitchen.jpg)] 2xl:bg-cover">
+        <div className="my-4 flex flex-col items-center bg-pr-dark-green p-4 pt-16 text-white 2xl:my-0 2xl:pb-96">
+          <span className=" font-semibold ">- Quick Connect</span>
+          <h2 className="py-4 text-center font-serif text-2xl md:text-4xl 2xl:ml-28 2xl:text-left">
+            Get in touch with us for any questions & help
+          </h2>
+          <div className="my-4 h-[3px] w-14 bg-white"></div>
+        </div>
       </div>
 
-      <ContactForm />
+      <div className="form-wrapper 2xl:absolute 2xl:top-64 2xl:z-50 2xl:flex 2xl:min-w-full 2xl:items-center 2xl:justify-center">
+        <ContactForm />
+      </div>
 
-      <ContactAgent />
+      <div className="agent-wrapper 2xl:mx-24 2xl:mb-8 2xl:mt-64">
+        <ContactAgent />
+      </div>
     </div>
   );
 }
