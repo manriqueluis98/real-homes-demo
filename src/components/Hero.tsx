@@ -2,6 +2,7 @@ import { siteData } from "@/config/siteData";
 import { Button } from "./ui/CustomButton";
 
 import "./Hero.css";
+import HeroButton from "./HeroButton";
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
           })}
         </ul>
 
-        <Button className="text-xl">{siteData.hero.button.text}</Button>
+        <HeroButton>{siteData.hero.button.text}</HeroButton>
       </div>
     </>
   );

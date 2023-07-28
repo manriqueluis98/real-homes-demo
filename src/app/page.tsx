@@ -8,12 +8,13 @@ import LocationSection from "@/components/LocationSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
+import ButtonToTop from "@/components/ui/ButtonToTop";
 
 const NatureSection = dynamic(() => import("../components/NatureSection"));
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between  text-pr-dark-green">
+    <main className="flex flex-col items-center justify-between  text-pr-dark-green lg:relative">
       <div className="nav-bg relative w-full">
         <Navbar />
         <Hero />
@@ -26,6 +27,8 @@ export default function Home() {
       <Contact />
       <hr className="min-w-[90%] 2xl:min-w-[82%] 3xl:min-w-[64%]"></hr>
       <Footer />
+
+      <ButtonToTop />
     </main>
   );
 }

@@ -5,7 +5,7 @@ import * as React from "react";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center font-semibold justify-center hover:bg-pr-dark-green hover:text-white hover:underline transition-colors duration-300 ease-in-out",
+  "inline-flex items-center font-semibold justify-center hover:bg-pr-dark-green hover:text-white  transition-colors duration-300 ease-in-out",
   {
     variants: {
       variant: {
@@ -21,7 +21,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -51,7 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {children}
       </button>
     );
-  }
+  },
 );
 Button.displayName = "Button";
 

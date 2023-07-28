@@ -16,7 +16,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Real Homes Demo",
+  title: "Real Homes",
   description: "Web Demo Developed by Luis Manrique",
 };
 
