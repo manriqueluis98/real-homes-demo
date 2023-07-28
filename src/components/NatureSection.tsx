@@ -1,3 +1,4 @@
+"use client";
 import {
   Accordion,
   AccordionContent,
@@ -7,7 +8,7 @@ import {
 import { iconImg } from "@/config/siteData";
 import Carousel from "./ui/carousel";
 
-const carouselImages = ["/assets/Nature-01.jpg", "/assets/Nature-02.jpg"];
+const carouselImages = ["/assets/nature-01.webp", "/assets/nature-02.webp"];
 
 export function CustomAccordion() {
   const data = [

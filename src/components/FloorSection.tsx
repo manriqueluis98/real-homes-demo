@@ -3,19 +3,19 @@ import ProductShowcaseHover from "./ui/ProductShowcaseHover";
 export default function FloorSection() {
   const floorsData = [
     {
-      imageUrl: "/assets/apartment-01.jpg",
+      imageUrl: "/assets/apartment-01.webp",
       title: "Three Bedrooms",
       subtitle: "From $2,10,000",
       buttonText: "View Floor Plan",
     },
     {
-      imageUrl: "/assets/apartment-02.jpg",
+      imageUrl: "/assets/apartment-02.webp",
       title: "Four Bedrooms",
       subtitle: "From $2,90,000",
       buttonText: "View Floor Plan",
     },
     {
-      imageUrl: "/assets/apartment-03.jpg",
+      imageUrl: "/assets/apartment-03.webp",
       title: "Five Bedrooms",
       subtitle: "From $3,70,000",
       buttonText: "View Floor Plan",

@@ -4,8 +4,8 @@ import Link from "next/link";
 import Carousel from "./ui/carousel";
 
 const carouselImages = [
-  "/assets/magical-life-1.jpg",
-  "/assets/magical-life-2.jpg",
+  "/assets/magical-life-1.webp",
+  "/assets/magical-life-2.webp",
 ];
 
 export const GreenLine = () => {

@@ -1,14 +1,3 @@
-"use client";
-
-import { Button, buttonVariants } from "@/components/ui/CustomButton";
-import Image from "next/image";
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
