@@ -9,7 +9,7 @@ function ContactAgent() {
         <div className="agent-image">
           <img
             alt="real state agent"
-            src="/assets/image_360.png"
+            src="/assets/image-360.webp"
             className="w-[128px] md:w-[100px]"
           />
         </div>
@@ -45,7 +45,7 @@ function ContactAgent() {
 export default function Contact() {
   return (
     <div className="flex flex-col md:w-full 2xl:relative">
-      <div className="banner 2xl:grid 2xl:grid-cols-2 2xl:bg-pr-dark-green 2xl:bg-[url(/assets/form-kitchen.jpg)] 2xl:bg-cover">
+      <div className="banner 2xl:grid 2xl:grid-cols-2 2xl:bg-pr-dark-green 2xl:bg-[url(/assets/form-kitchen.webp)] 2xl:bg-cover">
         <div className="my-4 flex flex-col items-center bg-pr-dark-green p-4 pt-16 text-white 2xl:my-0 2xl:items-end 2xl:pb-96">
           <div className="text-wrapper 2xl:mr-20">
             <span className=" font-semibold ">- Quick Connect</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, buttonVariants } from "@/components/ui/Button";
+import { Button, buttonVariants } from "@/components/ui/CustomButton";
 import Image from "next/image";
 
 import {

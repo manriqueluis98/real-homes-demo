@@ -26,7 +26,7 @@ export function ItemsIconListLi({ items }: { items: IconItemLi[] }) {
 export default function Amenities() {
   return (
     <div className="banner grid 2xl:h-fit 2xl:grid-cols-2">
-      <div className="banner-image hidden 2xl:inline-block 2xl:h-full 2xl:bg-[url(/assets/way-to-live.jpg)] 2xl:bg-cover 2xl:bg-center"></div>
+      <div className="banner-image hidden 2xl:inline-block 2xl:h-full 2xl:bg-[url(/assets/way-to-live.webp)] 2xl:bg-cover 2xl:bg-center"></div>
       <div className="banner-content 2xl:min-h-fit ">
         <div className="bg-pr-dark-green px-4 py-8 text-white 2xl:min-h-fit 2xl:px-24 3xl:py-24">
           <span className="font-semibold">{siteData.amenities.upperText}</span>
