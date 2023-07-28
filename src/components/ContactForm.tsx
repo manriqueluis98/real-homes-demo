@@ -16,6 +16,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Button } from "./ui/CustomButton";
+import { useToast } from "./ui/use-toast";
+import { Toaster } from "./ui/toaster";
+import { ToastAction } from "@/components/ui/toast";
 
 const formSchema = z.object({
   fullname: z.string().min(2, {
@@ -43,80 +46,92 @@ export function ContactForm() {
     },
   });
 
+  const { toast } = useToast();
+
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    toast({
+      title: `Thank You! ${values.fullname}`,
+      description: "Your tour schedule was registered successfully",
+      action: <ToastAction altText="Close Toast">Accept</ToastAction>,
+      duration: 3000,
+    });
+
+    form.reset();
   }
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="mx-4 space-y-3 md:mx-0 md:px-4 md:py-8 md:shadow-lg lg:mx-10 lg:rounded 2xl:mx-12 2xl:min-w-[1200px] 2xl:bg-white 2xl:p-12"
-      >
-        <FormDescription className="font-serif text-2xl text-pr-dark-green md:text-3xl">
-          Schedule a Tour
-        </FormDescription>
-        <FormField
-          control={form.control}
-          name="fullname"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Full name" {...field} />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone</FormLabel>
-              <FormControl>
-                <Input placeholder="923 923 232" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder="example@gmail.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Input placeholder="Message" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <div className="button-container my-8 flex flex-col items-center md:items-end md:py-4">
-          <Button type="submit" className="md:text-xl">
+    <>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="mx-4 space-y-3 md:mx-0 md:px-4 md:py-8 md:shadow-lg lg:mx-10 lg:rounded 2xl:mx-12 2xl:min-w-[1200px] 2xl:bg-white 2xl:p-12"
+        >
+          <FormDescription className="font-serif text-2xl text-pr-dark-green md:text-3xl">
             Schedule a Tour
-          </Button>
-        </div>
-      </form>
-    </Form>
+          </FormDescription>
+          <FormField
+            control={form.control}
+            name="fullname"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Full Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Full name" {...field} />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone</FormLabel>
+                <FormControl>
+                  <Input placeholder="923 923 232" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="example@gmail.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Message</FormLabel>
+                <FormControl>
+                  <Input placeholder="Message" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="button-container my-8 flex flex-col items-center md:items-end md:py-4">
+            <Button type="submit" className="md:text-xl">
+              Schedule a Tour
+            </Button>
+          </div>
+        </form>
+      </Form>
+      <Toaster />
+    </>
   );
 }
