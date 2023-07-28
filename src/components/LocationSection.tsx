@@ -71,7 +71,7 @@ export default function LocationSection() {
                 className="nearby-item flex flex-col items-center justify-center md:flex-row md:justify-start  md:gap-4 "
                 key={item.name}
               >
-                <div className="item-container w-fit rounded-full bg-pr-primary p-3">
+                <div className="item-container w-fit rounded-full bg-pr-primary p-3 3xl:p-4">
                   {item.icon}
                 </div>
                 <div className="text-container">

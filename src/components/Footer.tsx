@@ -27,7 +27,7 @@ const socialsData = [
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 py-10 md:w-full">
+    <footer className="flex flex-col items-center justify-center gap-4 py-10 md:w-full 2xl:max-w-screen-2xl">
       <div className="brand-container flex flex-col items-center gap-4 md:w-full md:flex-row md:justify-between md:px-6 lg:justify-around  2xl:justify-between 2xl:px-32">
         <div className="logo-container">
           <Logo />

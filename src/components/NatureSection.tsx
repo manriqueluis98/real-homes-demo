@@ -48,8 +48,8 @@ export function CustomAccordion() {
   ];
 
   return (
-    <div className="w-full 2xl:mx-12 2xl:ml-32 2xl:max-w-md">
-      <Accordion className="md:px-2" type="multiple">
+    <div className="w-full 2xl:mx-12 2xl:ml-32 3xl:flex 3xl:justify-evenly">
+      <Accordion className=" md:px-2" type="multiple">
         {data.map((item, idx) => {
           return (
             <AccordionItem key={idx} value={`value-${idx}`}>
@@ -70,14 +70,14 @@ export function CustomAccordion() {
 
 export default function NatureSection() {
   return (
-    <div className="mb-8 mt-12 flex  flex-col items-center justify-center px-4 2xl:m-0 2xl:my-32 2xl:min-w-full 2xl:p-0">
+    <div className="mb-8 mt-12 flex  flex-col items-center justify-center px-4 2xl:m-0 2xl:my-32 2xl:min-w-full 2xl:p-0 3xl:overflow-hidden">
       <h2 className="max-w-md text-center font-serif text-2xl md:text-5xl 2xl:max-w-2xl 2xl:text-7xl">
         Kind to Both - Nature & People
       </h2>
       <div className="green-line my-4 h-[3px] w-20 bg-pr-primary md:my-8">
         {" "}
       </div>
-      <div className="wrapper 2xl:flex 2xl:min-w-full 2xl:flex-row 2xl:items-center 2xl:justify-center">
+      <div className="wrapper 2xl:flex 2xl:min-w-full 2xl:flex-row 2xl:items-center 2xl:justify-center 3xl:grid 3xl:grid-cols-2">
         <CustomAccordion />
 
         <Carousel
