@@ -91,9 +91,37 @@ const amenities = {
   ],
 };
 
+const navItems = [
+  {
+    name: "About",
+    href: "#about-section",
+  },
+  {
+    name: "Amenities",
+    href: "#amenities-section",
+  },
+  {
+    name: "Features",
+    href: "#nature-section",
+  },
+  {
+    name: "Floor Plans",
+    href: "#floor-section",
+  },
+  {
+    name: "Locations",
+    href: "#location-section",
+  },
+  {
+    name: "Contact",
+    href: "#contact-section",
+  },
+];
+
 export const siteData = {
   phone,
   hero,
   about,
   amenities,
+  navItems,
 };

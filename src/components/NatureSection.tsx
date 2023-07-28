@@ -73,7 +73,10 @@ export function CustomAccordion() {
 
 export default function NatureSection() {
   return (
-    <div className="mb-8 mt-12 flex  flex-col items-center justify-center px-4 2xl:m-0 2xl:my-32 2xl:min-w-full 2xl:p-0 3xl:overflow-hidden">
+    <div
+      id="nature-section"
+      className="mb-8 mt-12 flex  flex-col items-center justify-center px-4 2xl:m-0 2xl:my-32 2xl:min-w-full 2xl:p-0 3xl:overflow-hidden"
+    >
       <h2 className="max-w-md text-center font-serif text-2xl md:text-5xl 2xl:max-w-2xl 2xl:text-7xl">
         Kind to Both - Nature & People
       </h2>

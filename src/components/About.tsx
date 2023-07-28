@@ -19,7 +19,10 @@ export const GreenLine = () => {
 
 export default function About() {
   return (
-    <div className="my-4 flex w-full flex-col items-center justify-center p-4 3xl:container 2xl:px-32">
+    <div
+      id="about-section"
+      className="my-4 flex w-full flex-col items-center justify-center p-4 3xl:container 2xl:px-32"
+    >
       <div className="about-content  md:flex md:flex-row lg:mb-16 lg:w-full lg:items-center lg:justify-between  ">
         <div className=" title-container">
           <span className=" font-semibold text-pr-primary">
