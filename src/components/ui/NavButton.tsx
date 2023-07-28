@@ -10,7 +10,7 @@ export default function NavButton({
   children: string;
   sectionId: string;
 }) {
-  function scheduleBtn() {
+  function scrollBtn() {
     customScrollTo(sectionId);
   }
 
@@ -18,7 +18,7 @@ export default function NavButton({
     <Button
       variant={"navItem"}
       className="px-6 py-3 text-base"
-      onClick={() => scheduleBtn()}
+      onClick={() => scrollBtn()}
     >
       {children}
     </Button>

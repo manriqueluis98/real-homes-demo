@@ -31,7 +31,7 @@ export default function NavBarAfterScroll() {
         className={`hidden w-full items-center justify-center gap-4 bg-white py-2 shadow-md md:flex-row md:justify-between md:px-4  lg:px-6 lg:py-4 ${
           isVisible
             ? "2xl:fixed 2xl:top-0 2xl:z-50 2xl:flex 2xl:flex-row"
-            : "2xl:hidden"
+            : "hidden 2xl:hidden"
         }`}
       >
         <div className="nav-brand">
