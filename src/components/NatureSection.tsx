@@ -5,8 +5,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
 import { iconImg } from "@/config/siteData";
-import Carousel from "./ui/carousel";
+import dynamic from "next/dynamic";
+const Carousel = dynamic(() => import("./ui/carousel"));
 
 const carouselImages = ["/assets/nature-01.webp", "/assets/nature-02.webp"];
 

@@ -14,7 +14,7 @@ export default function Navbar() {
         </div>
 
         <div className="nav-menu flex flex-row gap-4">
-          <img src="/assets/icons/menu-grid-dot.svg" />
+          <img src="/assets/icons/menu-grid-dot.svg" alt="menu icon" />
           <Button
             variant={"navItem"}
             className="flex w-fit flex-row gap-2 px-4 py-2 shadow-md md:shadow-none lg:px-6"

@@ -20,6 +20,7 @@ export default function ProductShowcaseHover({
           <img
             src={product.imageUrl}
             className="min-w-full  object-cover duration-500 group-hover:scale-[1.03]"
+            alt="Floor image"
           ></img>
         </div>
         <div

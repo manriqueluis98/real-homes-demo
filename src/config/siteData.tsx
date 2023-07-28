@@ -1,7 +1,7 @@
 const phone = "(800) 543 5432";
 
 export const iconImg = (name: string, alt?: string) => {
-  return <img src={`/assets/icons/${name}`}></img>;
+  return <img src={`/assets/icons/${name}`} alt={alt}></img>;
 };
 
 const hero = {
@@ -10,15 +10,15 @@ const hero = {
   items: [
     {
       name: "Hi-end Furnitures",
-      icon: iconImg("image (8).svg"),
+      icon: iconImg("image (8).svg", "Furniture Icon"),
     },
     {
       name: "24 Floors",
-      icon: iconImg("image (9).svg"),
+      icon: iconImg("image (9).svg", "Floors Icon"),
     },
     {
       name: "Natural Lighting",
-      icon: iconImg("image (10).svg"),
+      icon: iconImg("image (10).svg", "Sun Icon"),
     },
   ],
   button: {
@@ -58,35 +58,35 @@ const amenities = {
   items: [
     {
       name: "High End Furniture",
-      icon: iconImg("image (8).svg"),
+      icon: iconImg("image (8).svg", "Furniture Icon"),
     },
     {
       name: "24 Floors",
-      icon: iconImg("image (9).svg"),
+      icon: iconImg("image (9).svg", "Floors Icon"),
     },
     {
       name: "Natural Lighting",
-      icon: iconImg("image (10).svg"),
+      icon: iconImg("image (10).svg", "Sun Icon"),
     },
     {
       name: "Solar Heating",
-      icon: iconImg("image (11).svg"),
+      icon: iconImg("image (11).svg", "Sun Heat Icon"),
     },
     {
       name: "Pet Friendly",
-      icon: iconImg("image (12).svg"),
+      icon: iconImg("image (12).svg", "Pet Friendly Icon"),
     },
     {
       name: "Hydromassage Bathrooms",
-      icon: iconImg("image (13).svg"),
+      icon: iconImg("image (13).svg", "Shower Icon"),
     },
     {
       name: "Low Energy Tools",
-      icon: iconImg("image (14).svg"),
+      icon: iconImg("image (14).svg", "Energy Icon"),
     },
     {
       name: "Average size 1,258 Sq Ft",
-      icon: iconImg("image (15).svg"),
+      icon: iconImg("image (15).svg", "Square Feet Icon"),
     },
   ],
 };

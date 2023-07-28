@@ -2,11 +2,14 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
 import Amenities from "@/components/Amenities";
-import NatureSection from "@/components/NatureSection";
+
 import FoorSection from "@/components/FloorSection";
 import LocationSection from "@/components/LocationSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const NatureSection = dynamic(() => import("../components/NatureSection"));
 
 export default function Home() {
   return (
