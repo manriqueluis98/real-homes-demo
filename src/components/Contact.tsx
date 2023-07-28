@@ -57,7 +57,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="form-wrapper 2xl:absolute 2xl:top-64 2xl:z-50 2xl:flex 2xl:min-w-full 2xl:items-center 2xl:justify-center">
+      <div className="form-wrapper 2xl:absolute 2xl:top-64 2xl:z-10 2xl:flex 2xl:min-w-full 2xl:items-center 2xl:justify-center">
         <ContactForm />
       </div>
 

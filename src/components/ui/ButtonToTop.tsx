@@ -31,7 +31,7 @@ export default function ButtonToTop() {
     <div
       onClick={handleGoUp}
       className={`hidden rounded-md border-2 border-pr-primary bg-pr-primary p-1 transition-all duration-500 hover:bg-pr-light-green lg:fixed lg:bottom-2 lg:right-2 xl:bottom-4 xl:right-4 ${
-        isVisible ? "  lg:block lg:shadow-xl" : "lg:hidden"
+        isVisible ? "  lg:z-50 lg:block lg:shadow-xl" : "lg:hidden"
       }`}
     >
       <MdOutlineExpandLess

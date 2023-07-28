@@ -23,7 +23,10 @@ export default function FloorSection() {
   ];
 
   return (
-    <div className="my-4 p-4 2xl:p-0 3xl:flex 3xl:flex-col 3xl:items-center 3xl:justify-center">
+    <div
+      id="floor-section"
+      className="my-4 p-4 2xl:mb-32 2xl:p-0 3xl:flex 3xl:flex-col 3xl:items-center 3xl:justify-center"
+    >
       <div className="wrapper md:mb-16 md:mt-8 md:flex md:flex-row md:items-center md:gap-16 2xl:mx-24 3xl:max-w-screen-2xl">
         <div className="title-container">
           <span className=" font-semibold text-pr-primary">- Floor Plans</span>

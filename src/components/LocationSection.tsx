@@ -55,7 +55,10 @@ const nearbyItems = [
 export default function LocationSection() {
   return (
     <>
-      <div className="my-4 flex flex-col items-center justify-center p-4">
+      <div
+        id="location-section"
+        className="my-4 flex flex-col items-center justify-center p-4"
+      >
         <span className=" font-semibold text-pr-primary">- Location</span>
         <h2 className="py-4 text-center font-serif text-2xl md:text-5xl">
           All Roads Lead To RealHomes
