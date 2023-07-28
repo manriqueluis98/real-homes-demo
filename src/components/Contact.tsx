@@ -4,7 +4,7 @@ import { ContactForm } from "./ContactForm";
 
 function ContactAgent() {
   return (
-    <div className="my-8 flex flex-col items-center justify-center gap-4 text-center md:grid md:grid-cols-2 md:place-items-center 2xl:grid-cols-4 2xl:gap-0 2xl:text-lg">
+    <div className="my-8 flex flex-col items-center justify-center gap-4 text-center md:grid md:grid-cols-2 md:place-items-center 2xl:grid-cols-4 2xl:gap-0 2xl:text-left 2xl:text-lg">
       <div className="agent md:flex md:flex-row md:items-center md:gap-4">
         <div className="agent-image">
           <img
@@ -25,7 +25,7 @@ function ContactAgent() {
         <p>(222) 546 7594</p>
       </div>
 
-      <div className="address-data">
+      <div className="address-data 2xl:max-w-[200px]">
         <p>1130, Avenue Villa Newyork, USA</p>
       </div>
 
@@ -46,12 +46,14 @@ export default function Contact() {
   return (
     <div className="flex flex-col md:w-full 2xl:relative">
       <div className="banner 2xl:grid 2xl:grid-cols-2 2xl:bg-pr-dark-green 2xl:bg-[url(/assets/form-kitchen.jpg)] 2xl:bg-cover">
-        <div className="my-4 flex flex-col items-center bg-pr-dark-green p-4 pt-16 text-white 2xl:my-0 2xl:pb-96">
-          <span className=" font-semibold ">- Quick Connect</span>
-          <h2 className="py-4 text-center font-serif text-2xl md:text-4xl 2xl:ml-28 2xl:text-left">
-            Get in touch with us for any questions & help
-          </h2>
-          <div className="my-4 h-[3px] w-14 bg-white"></div>
+        <div className="my-4 flex flex-col items-center bg-pr-dark-green p-4 pt-16 text-white 2xl:my-0 2xl:items-end 2xl:pb-96">
+          <div className="text-wrapper 2xl:mr-20">
+            <span className=" font-semibold ">- Quick Connect</span>
+            <h2 className="py-4 text-center font-serif text-2xl md:text-4xl 2xl:max-w-[500px] 2xl:text-left">
+              Get in touch with us for any questions & help
+            </h2>
+            <div className="my-4 h-[3px] w-14 bg-white"></div>
+          </div>
         </div>
       </div>
 
@@ -59,7 +61,7 @@ export default function Contact() {
         <ContactForm />
       </div>
 
-      <div className="agent-wrapper 2xl:mx-24 2xl:mb-8 2xl:mt-64">
+      <div className="agent-wrapper 2xl:mx-24 2xl:mb-8 2xl:mt-64 3xl:flex 3xl:max-w-screen-xl 3xl:flex-col 3xl:items-center 3xl:self-center">
         <ContactAgent />
       </div>
     </div>
