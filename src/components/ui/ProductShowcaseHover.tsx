@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "./Button";
+import { Button } from "./CustomButton";
 
 type floorData = {
   title: string;
@@ -15,17 +15,17 @@ export default function ProductShowcaseHover({
 }) {
   return (
     <div className="overflow-hidden">
-      <div className="group product-container relative">
+      <div className="product-container group relative">
         <div className="product-image  aspect-4/3">
           <img
             src={product.imageUrl}
-            className="object-cover  min-w-full group-hover:scale-[1.03] duration-500"
+            className="min-w-full  object-cover duration-500 group-hover:scale-[1.03]"
           ></img>
         </div>
         <div
-          className={` product-content absolute -bottom-28 group-hover:-translate-y-28  duration-300 text-white bg-gradient-to-t p-8 from-black/70 min-w-full to-transparent`}
+          className={` product-content absolute -bottom-28 min-w-full  bg-gradient-to-t from-black/70 to-transparent p-8 text-white duration-300 group-hover:-translate-y-28`}
         >
-          <h3 className="text-2xl md:text-4xl md:w-24 font-serif">
+          <h3 className="font-serif text-2xl md:w-24 md:text-4xl">
             {product.title}
           </h3>
           <p className="text-xl">{product.subtitle}</p>
