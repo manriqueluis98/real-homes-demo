@@ -1,7 +1,8 @@
 import { siteData } from "@/config/siteData";
 import { IoIosArrowForward } from "react-icons/io";
 import Link from "next/link";
-import Carousel from "./ui/carousel";
+import dynamic from "next/dynamic";
+const Carousel = dynamic(() => import("./ui/carousel"));
 
 const carouselImages = [
   "/assets/magical-life-1.webp",
